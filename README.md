@@ -1,7 +1,7 @@
 # myFirstRepoKapaMnyemu
 import java.util.*;
 
-public class ATM {
+public class BANKING {
 
 	public static Scanner kbd = new Scanner(System.in);
 	//The checkID method determines if acctNum is a valid account number
