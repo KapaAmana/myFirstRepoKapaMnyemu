@@ -4,9 +4,11 @@ import java.util.*;
 public class ATM {
 
 	public static Scanner kbd = new Scanner(System.in);
+	//The checkID method determines if acctNum is a valid account number
 
 	public static String checkID(String acctNum, String pwd) {
 		String result = "error";
+	//Strings a, b, and c contain the valid account numbers and passwords.
 
 		String a = "44567-5 mypassword 520.36";
 		String b = "1234567-6 anotherpassword 48.20";
@@ -72,7 +74,8 @@ public class ATM {
 		int count = 0, menuOption = 0;
 		double depositAmt = 0, withdrawAmt = 0, currentBal = 0;
 		boolean foundNonDigit;
-
+	//loop that will count the number of login attempts
+        //you make and will exit program if it is more than 3.
 		do {
 			foundNonDigit = false;
 			System.out.println("Please Enter Your Account Number: ");
@@ -95,7 +98,9 @@ public class ATM {
 				System.out.println(origBal);
 
 		} while (origBal.equals("error"));
-
+	//this loop will keep track of the options that 
+        //the user inputs in for the menu. Also withdraw, deposit or logout
+	
 		currentBal = Double.parseDouble(origBal);
 
 		while (menuOption != 4) {
